@@ -90,8 +90,8 @@
         if (p.flight.length) {
             html += 'Flight: <a href="https://flightaware.com/live/flight/'+p.flight+'" target="_blank"><b>'+p.flight+'</b></a><br>';
         }
-        html += 'Altitude: '+p.altitude+' feet<br>';
-        html += 'Speed: '+p.speed+' knots<br>';
+        html += 'Altitude: '+(p.altitude/3.281).toFixed(0)+' m<br>';
+        html += 'Speed: '+(p.speed*1.852).toFixed(0)+' km/h<br>';
         html += 'Coordinates: '+p.lat+', '+p.lon+'<br>';
         i.innerHTML = html;
     }
