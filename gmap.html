@@ -86,9 +86,9 @@
         var p = Planes[Selected];
 
         if (!p) return;
-        var html = 'ICAO: '+p.hex+'<br>';
+        var html = 'ICAO: <a href="https://www.planespotters.net/search?q='+p.hex+'" target="_blank">'+p.hex+'</a><br>';
         if (p.flight.length) {
-            html += '<b>'+p.flight+'</b><br>';
+            html += 'Flight: <a href="https://flightaware.com/live/flight/'+p.flight+'" target="_blank"><b>'+p.flight+'</b></a><br>';
         }
         html += 'Altitude: '+p.altitude+' feet<br>';
         html += 'Speed: '+p.speed+' knots<br>';
